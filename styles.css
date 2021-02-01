@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  height: 100vh;
+}
+body {
+  position: relative;
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--dark-cyan);
+}
+.attribution {
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  position: absolute;
+}
+.container {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.container::before,
+.container::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+.container::before {
+  transform: translate(-50%, -37%);
+  background-position: bottom right;
+  background-image: url("./images/bg-pattern-top.svg");
+}
+.container::after {
+  transform: translate(50%, 47%);
+  background-position: top left;
+  background-image: url(./images/bg-pattern-bottom.svg);
+}
+.name {
+  font-weight: 700;
+}
+.age {
+  font-weight: 400;
+  color: var(--Dark-grayish-blue);
+}
+.numbers {
+  font-weight: 700;
+}
+.city {
+  color: var(--Dark-grayish-blue);
+  font-size: 13px;
+}
+.numers {
+  color: var(--Very-dark-desaturated-blue);
+}
+.descript {
+  color: var(--Dark-grayish-blue);
+}
+.card {
+  box-shadow: 1px 1px 50px 5px rgba(0, 0, 0, 0.2);
+  height: 375px;
+  width: 350px;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 15px;
+}
+.photo img {
+  bottom: -50px;
+  position: absolute;
+  border: 4px solid white;
+  border-radius: 50%;
+}
+.photo {
+  width: 100%;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 38%;
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-image: url("./images/bg-pattern-card.svg");
+}
+p {
+  font-size: 18px;
+}
+.info {
+  height: 26%;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.info .city {
+  margin-top: 15px;
+}
+.stats {
+  height: 22%;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.stats .social {
+  list-style: none;
+  text-align: center;
+}
+.stats .social .label {
+  color: var(--Dark-grayish-blue);
+  font-size: 13px;
+  margin-top: 7px;
+}
